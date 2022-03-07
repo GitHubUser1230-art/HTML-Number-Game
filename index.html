@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title> JS is hurting my brain </title>
+</head>
+
+<body>
+
+
+
+<button onclick="game()">Guess</button>
+<p id="demo"></p>
+
+
+
+<script>
+	function getRandomInt(max) {
+  		return Math.floor(Math.random() * max);
+	}
+	var	rand = getRandomInt(99) + 1
+
+	function game() {
+		console.log("Wow you cheat. The number is " + rand)
+		var i = window.prompt("Pick a number 1-100")
+		if (i==rand) {
+			window.alert("You won!")
+			rand = getRandomInt(99) + 1
+		} else if (rand>i) {
+			window.alert("Greater")
+		} else {
+			window.alert("Less")
+		}
+	}
+</script>
+
+</body>
+
+</html>
